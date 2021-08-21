@@ -2,15 +2,6 @@
 
 int main()
 {
-    string file_name = "natural.txt";
-    char fileName[] = "natural.txt";
-    string text = readFile(file_name);
-    char* pchar = readFile(fileName);
-
-    cout << pchar << endl;
-    cout << text << endl;
-
-    delete[] pchar;
 
     return 0;
 }

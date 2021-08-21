@@ -1,6 +1,6 @@
 #include "functions.h"
 
-int length(string fileName)
+int lengthFile(string fileName)
 {
     int length; // Variable que contendra el tamaño del archivo
     fstream file;
@@ -14,5 +14,14 @@ int length(string fileName)
     } else { length = 0; }
     file.close();
 
+    return length;
+}
+
+int length(char text[])
+{
+    int length = 0; // Variable que contendra el tamaño de la cadena de caracteres
+    for (int index = 0; text[index] != NULL; index++) {
+        length++;
+    }
     return length;
 }

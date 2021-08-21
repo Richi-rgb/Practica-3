@@ -3,26 +3,26 @@
 char* readFile(char fileName[])
 {
     fstream file;
-    char* pchar = new char[length(fileName)]; // Puntero que va a ser devuelto
+    char* pchar = new char[lengthFile(fileName)]; // Puntero que va a ser devuelto
     file.open(fileName, ios::in);
     if (file.is_open()) {
         // Lee datos en bloque
-        file.read(pchar,length(fileName));
+        file.read(pchar, lengthFile(fileName));
 
         file.close();
     }
     return pchar;
 }
 
-string readFile(string fileName)
+string readFileFromStart(string fileName)
 {
     fstream file;
     string fileText;
     file.open(fileName, ios::in);
     if (file.is_open()) {
-        char* pchar = new char[length(fileName)];
+        char* pchar = new char[lengthFile(fileName)];
         // Lee datos en bloque
-        file.read(pchar,length(fileName));
+        file.read(pchar,lengthFile(fileName));
 
         file.close();
 
@@ -31,16 +31,16 @@ string readFile(string fileName)
     return fileText;
 }
 
-void writeFile(char fileName[], char text)
+void writeFile(string fileName, char text[])
 {
     fstream file;
     file.open(fileName, ios::out);
     if (file.is_open()) {
-
+        file.write(text, lengthFile(fileName));
     }
 }
 
-void writeFile(string fileName, string text)
+void writeFileFromStart(string fileName, string text)
 {
     fstream file;
     file.open(fileName, ios::out);

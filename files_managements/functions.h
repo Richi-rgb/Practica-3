@@ -7,6 +7,9 @@
 
 using namespace std;
 
-int length(string fileName); // Toma el numero de caracteres de un archivo
+int lengthFile(string fileName); // Toma el numero de caracteres de un archivo
+
+int length(char text[]); // Toma el numero de caracteres de una cadena de caracteres
+
 
 #endif // FUNCTIONS_H
